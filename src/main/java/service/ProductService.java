@@ -8,17 +8,17 @@ import util.DbUtil;
 
 public class ProductService {
 
-    public Product authentication(int id) {
-        try (Connection conn = DbUtil.getConnection()) {
-            ProductDao productDao = new ProductDao(conn);
-            Product product = productDao.findById(id);
+	public Product authentication(int id) {
+		try (Connection conn = DbUtil.getConnection()) {
+			ProductDao productDao = new ProductDao(conn);
+			Product product = productDao.findById(id);
 
-            return product;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+			return product;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
-        return null;
-    }
+		return null;
+	}
 
 }
